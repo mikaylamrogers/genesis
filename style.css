@@ -1,0 +1,246 @@
+body {
+  box-sizing: border-box;
+  background-color: black;
+  margin: 3;
+  font-family: "Moche-Bold";
+  font-size: 2rem;
+}
+
+/* import custom font */
+@font-face {
+      font-family: 'Moche-Bold';
+      src: url('fonts/moche-bold-webfont.woff') format('woff2'),
+           url('fonts/moche-bold-webfont.woff') format('woff'),
+      font-weight: bold;
+      font-style: bold;
+  }
+
+@font-face {
+        font-family: 'LilGrotesk-Bold';
+        src: url('fonts/LilGrotesk-Bold.otf');
+    }
+
+/* main header text  */
+h1 {
+  padding: 33vmin 10vmin 0vmin 10vmin;
+  color: white;
+  text-align: center;
+}
+
+/* tracking animation */
+.tracking-in-expand {
+	   animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+/* tracking animation */
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* change 'heavens' to yellow during hover */
+.heavens:hover {
+  color: #fac71e;
+  /* background-image: url('glimmer.png'); */
+}
+
+/* change 'earth' to green during hover */
+.earth:hover {
+  color: #3da80f;
+}
+
+/* text settings for all <p> tags */
+p {
+  font-family: "Moche-Bold";
+  font-size: 45px;
+  text-align: center;
+}
+
+/* FIRST DAY settings */
+.first {
+  padding: 65vmin 0vmin 0vmin 0vmin;
+  color: black;
+}
+
+/* focus in text animation on hover (example code from https://animista.net/play/text/focus-in) */
+.text-focus-in:hover {
+	 animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@keyframes text-focus-in {
+/* at initial 0%, add blur and zero opacity */
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+/* at final 1-0%, remove blur and add opacity */
+
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+/* growing circle (example code from https://codepen.io/rdhaliwal/pen/EuGbn) */
+/* circle settings & trigger grow animation timing */
+.circle {
+  background: #fac71e;
+  width: 1000px;
+  height: 1000px;
+  margin: auto;
+  border-radius: 100%;
+  overflow: hidden;
+  -webkit-animation: grow 4s infinite;
+}
+
+@-webkit-keyframes grow {
+/* at initial 0%, transform circle scale sizes */
+ 0% {
+   -webkit-transform: scale( 0.1 );-moz-transform: scale( 0.1 );-o-transform: scale( 0 );-ms-transform: scale( 0 );transform: scale( 0 );
+  }
+/* at 50% point of animation, set transform circle scale sizes */
+  50% {
+  -webkit-transform: scale( 0.3 );-moz-transform: scale( 0.3 );-o-transform: scale( 0.3 );-ms-transform: scale( 0.3 );transform: scale( 0.3 );
+  }
+}
+
+/* SECOND DAY settings */
+.second {
+  /* background-image: url('firmament.png'); */
+  background-size: cover;
+  font-size: 65px;
+  color: #fac71e;
+  padding: -200px;
+  text-align: left;
+}
+
+/* horizontal text shake on hover (example from https://animista.net/play/attention/shake/shake-horizontal) */
+.shake-horizontal:hover {
+	   animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@keyframes shake-horizontal {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+            transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+            transform: translateX(-8px);
+  }
+}
+
+.third {
+  background-image: url('landscape.jpg');
+  padding: 30vmin 10vmin 0vmin 10vmin;
+  font-size: 40px;
+  color: white;
+  text-align: right;
+}
+
+.herbs {
+  padding: 60px;
+  background: green;
+  color: pink;
+  font-size: 5px;
+  transition: width 2s;
+  width: 100px;
+  height: 100px;
+  text-align: left;
+}
+
+.herbs:hover {
+   width: 1080px;
+   height: 220px;
+   font-size: 40px;
+}
+
+.fourth {
+  padding: 30vmin 10vmin 0vmin 10vmin;
+  font-size: 50px;
+  color: white;
+  text-align: right;
+}
+
+.jello-horizontal:hover {
+	-webkit-animation: jello-horizontal 0.9s both;
+	        animation: jello-horizontal 0.9s both;
+}
+
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+.life {
+  padding: 30px;
+  color: pink;
+  font-size: 10px;
+}
+
+.life:hover {
+  transform: scale(2.5);
+}
+
+.man {
+  color: #fac71e;
+  font-size: 40px;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+}
+
+.man:hover {
+  color: pink;
+}
